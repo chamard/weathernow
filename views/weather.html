@@ -1,0 +1,43 @@
+<!--date in seconde. Need to be convert in ms, so x1000-->
+<div class="container">
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h1 id="title">{{weather.city.name}}, {{weather.city.country}} </h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="w in weather.list">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="container-fluid">
+          <div class="col-xs-4  col-sm-4 col-md-4">
+            <!--<img alt="{{w.weather[0].icon}}" src="http://openweathermap.org/img/w/{{w.weather[0].icon}}.png" />-->
+            <i class="wi wi-owm-{{w.weather[0].id}}"></i>
+          </div>
+
+          <div class="col-xs-8  col-sm-8 col-md-8">
+            <!--date in seconde. Need to be convert in ms, so x1000-->
+            <h3>{{w.dt*1000 | date:'EEEE d'}}</h4>
+            <h4>{{w.temp.min| number:0}} / {{w.temp.max | number:0}} {{U}}</h4>
+            <h4>{{w.weather[0].description}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+<!--current API openweathermap
+<h1>{{weather.name}} </h1>
+<h2>{{weather.main.temp_min}} °C / {{weather.main.temp}} °C</h2>
+<h3>{{weather.weather[0].description}}</h3>
+            <h4>sunrise {{weather.sys.sunrise|date:'HH:mm'}}</h4>
+            <h4>sunset {{weather.sys.sunset|date:'HH:mm'}}</h4>
+
+            <p>weather : {{weather}}</p>
+            -->
