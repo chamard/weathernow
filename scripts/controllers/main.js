@@ -69,7 +69,10 @@ app.controller('MainCtrl', function($scope, $rootScope, $location, HttpRequest, 
   };
 
   $scope.locateMe = function() {
-    //HTML5 geolocation
+    /* HTML5 geolocation
+     * It seems not working with chrome in weathernow.surge.sh because it is not a secure origin HTTPS.
+     * But it works well in localhost or in safari and EI.
+     */
     if (navigator.geolocation) {
       //redirect to the weather page view
 
