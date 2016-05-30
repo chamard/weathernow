@@ -9,7 +9,7 @@
  */
  
 var app = angular.module('weatherNowApp');
-var $key = '180589a48cb634643cd26e6af1e83057';
+var $key = '???YOUR OPENWEATHERMAP KEY???';
 var $daily = 'http://api.openweathermap.org/data/2.5/forecast/daily?';
 
 app.factory('HttpRequest', function($http, $q, Cookies) {
